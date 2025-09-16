@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Cho Diệp Anh 💖</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #fffafc;
+    }
+    img {
+      margin-top: 20px;
+      width: 200px;
+    }
+    h2 {
+      margin: 20px;
+      font-size: 24px;
+    }
+    .btn {
+      padding: 20px 50px;
+      font-size: 24px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+    #yesBtn {
+      background-color: #28a745;
+      color: white;
+    }
+    #noBtn {
+      background-color: #dc3545;
+      color: white;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://i.ibb.co/SNGrK0H/bear-love.png" alt="cute">
+  <h2>Em đồng ý làm người iuuu anh nhaaa bé :3</h2>
+  <button id="yesBtn" class="btn">Có ạ 💚</button>
+  <button id="noBtn" class="btn">Thật sự em không đồng ý sao???</button>
+
+  <script>
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+    let yesSize = 1;
+
+    // Nút xanh càng bấm càng to
+    yesBtn.addEventListener('click', () => {
+      yesSize += 0.2;
+      yesBtn.style.transform = `scale(${yesSize})`;
+    });
+
+    // Nút đỏ "trốn tránh" không cho bấm
+    noBtn.addEventListener('mouseover', () => {
+      const x = Math.floor(Math.random() * 300) - 150;
+      const y = Math.floor(Math.random() * 300) - 150;
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  </script>
+</body>
+</html>
